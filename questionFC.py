@@ -5,7 +5,18 @@ split up into different sized molecules?
     a. Electrolysis
     b. Electrophrosis
     c. Chromatography
-    d. None of the above""")
+    d. None of the above\n""")
 
 print("""This is a one question science quiz. There will be four possible answers,
-and only one of them is correct.""")
+and only one of them is correct. When selecting answers, enter the letter that
+precedes it.\n""")
+
+while q1Check == False:
+        q1Answer = str(input(q1))
+        q1Answer = q1Answer.lower() 
+        if "`" < q1Answer < "e":
+            q1Check = True
+        else:
+            print("""Please enter your answer choice by putting in the letter
+that precedes it.\n""")
+
