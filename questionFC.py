@@ -12,17 +12,19 @@ and only one of them is correct. When selecting answers, enter the letter that
 precedes it.\n""")
 
 while q1Check == False:
-        q1Answer = str(input(q1))
-        q1Answer = q1Answer.lower() 
-        if "`" < q1Answer < "e":
-            if q1Answer == "b":
-                print("""Your answer is correct! Electrophrosis is the technique by
-which the genome of an organism can be split up into different sized molecules.\n""")
-            else:
-                print("""Sorry, your answer isn't correct. If you would like to try
-again, please restart the quiz.""")
-            q1Check = True
-        else:
-            print("""Please enter your answer choice by putting in the letter
-that precedes it.\n""")
-
+        try:
+                q1Answer = str(input(q1))
+                q1Answer = q1Answer.lower()
+                if q1Answer == "b":
+                        print("Got your answer choice!")
+                        q1Check = True
+                else:
+                        if "`" < q1Answer < "e":
+                                print("Got your answer choice!")
+                                q1Check = True
+                        else:
+                                print("""Please enter a letter that is between the
+letters A and D.\n""")
+        except ValueError:
+                print("""Please enter a letter. Select your answer choice by putting in
+the letter that precedes your answer choice.""")
