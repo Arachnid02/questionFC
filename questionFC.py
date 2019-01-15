@@ -1,6 +1,7 @@
 #Initialize variables
 q1Check = bool(False)
 q1Answer = str("")
+score = int()
 q1 = str("""1. What is the technique called by which the genome of an organism can be
 split up into different sized molecules?
     a. Electrolysis
@@ -24,6 +25,8 @@ while q1Check == False:
                 #Checks to see if the input is the correct answer
                 if q1Answer == "b":
                         print("Got your answer choice!")
+                        #Incerement the scorekeeping variable by 1
+                        score  += 1
                         q1Check = True
                 #If it isn't check to see if it's an acceptable answer
                 elif "`" < q1Answer < "e":
@@ -37,3 +40,6 @@ letters A and D.\n""")
         except ValueError:
                 print("""Please enter a letter. Select your answer choice by putting in
 the letter that precedes your answer choice.""")
+
+#Print the user's score in terms of a percentage
+print("Your score is:", score*100, "%")
